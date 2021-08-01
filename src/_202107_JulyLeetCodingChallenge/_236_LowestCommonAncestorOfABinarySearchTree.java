@@ -35,7 +35,7 @@ Constraints:
 5. p and q will exist in the BST.
 
  */
-public class LowestCommonAncestorOfABinarySearchTree {
+public class _236_LowestCommonAncestorOfABinarySearchTree {
 
     /*
     Key point of solution: LCA is the node <= p && >= q

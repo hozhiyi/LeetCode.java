@@ -2,7 +2,7 @@ package _202107_JulyLeetCodingChallenge;
 
 import java.util.*;
 
-public class ReduceArraySizeToTheHalf {
+public class _1338_ReduceArraySizeToTheHalf {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 1, 7, 9, 8, 10, 11, 12, 10, 13, 14, 12};
         System.out.println(minSetSize(arr));

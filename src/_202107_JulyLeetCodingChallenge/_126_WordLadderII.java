@@ -2,7 +2,7 @@ package _202107_JulyLeetCodingChallenge;
 
 import java.util.*;
 
-public class WordLadderII {
+public class _126_WordLadderII {
 
     public static void main(String[] args) {
         String beginWord = "hit", endWord = "cog";

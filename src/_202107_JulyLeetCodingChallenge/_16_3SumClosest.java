@@ -2,7 +2,7 @@ package _202107_JulyLeetCodingChallenge;//package 202107_JulyLeetCodingChallenge
 import java.util.Arrays;
 
 
-public class _3SumClosest {
+public class _16_3SumClosest {
     public int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);
         int ans = nums[0] + nums[1] + nums[2];

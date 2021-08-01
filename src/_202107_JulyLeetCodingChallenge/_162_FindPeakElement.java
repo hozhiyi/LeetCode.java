@@ -1,6 +1,6 @@
 package _202107_JulyLeetCodingChallenge;
 
-public class FindPeakElement {
+public class _162_FindPeakElement {
     public static void main(String[] args) {
         int[] nums = {1,2,1,3,2};
         System.out.println(findPeakElement((nums)));

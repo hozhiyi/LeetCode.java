@@ -1,6 +1,6 @@
 package _202107_JulyLeetCodingChallenge;
 
-public class ConvertSortedArrayToBinarySearchTree {
+public class _108_ConvertSortedArrayToBinarySearchTree {
 
     // TreeNode Class
     static class TreeNode {

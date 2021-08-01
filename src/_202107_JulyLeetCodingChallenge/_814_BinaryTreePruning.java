@@ -1,6 +1,6 @@
 package _202107_JulyLeetCodingChallenge;
 
-public class BinaryTreePruning {
+public class _814_BinaryTreePruning {
 
     public class TreeNode {
         int val;

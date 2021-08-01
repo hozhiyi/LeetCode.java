@@ -2,7 +2,7 @@ package _202107_JulyLeetCodingChallenge;
 
 import java.util.*;
 
-public class FindKClosestElements {
+public class _658_FindKClosestElements {
     public static void main(String[] args) {
 //        int[] arr = {1, 2, 3, 4, 5};
 //        int[] arr1 = {1};

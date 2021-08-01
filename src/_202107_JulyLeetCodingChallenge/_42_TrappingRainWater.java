@@ -3,7 +3,7 @@ package _202107_JulyLeetCodingChallenge;
 import java.util.Deque;
 import java.util.LinkedList;
 
-public class TrappingRainWater {
+public class _42_TrappingRainWater {
     public static void main(String[] args) {
         int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
         System.out.println(trap(height));

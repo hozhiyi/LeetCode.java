@@ -2,7 +2,7 @@ package _202107_JulyLeetCodingChallenge;
 
 import java.util.Arrays;
 
-public class MaximumLengthOfRepeatedSubarray {
+public class _718_MaximumLengthOfRepeatedSubarray {
     public static void main(String[] args) {
 //        int[] nums1 = {1, 2, 3, 2, 1};
 //        int[] nums2 = {3, 2, 1, 4, 7};

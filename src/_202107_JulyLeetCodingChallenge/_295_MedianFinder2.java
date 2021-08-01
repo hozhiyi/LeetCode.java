@@ -3,12 +3,12 @@ package _202107_JulyLeetCodingChallenge;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class MedianFinder2 {
+public class _295_MedianFinder2 {
     // 42 ms solution
     PriorityQueue<Integer> leftArr; //max heap
     PriorityQueue<Integer> rightArr; //min heap
 
-    public MedianFinder2() {
+    public _295_MedianFinder2() {
 
         leftArr = new PriorityQueue<Integer>((Integer a, Integer b) -> b - a);
         rightArr = new PriorityQueue<Integer>(Comparator.comparingInt((Integer a) -> a));

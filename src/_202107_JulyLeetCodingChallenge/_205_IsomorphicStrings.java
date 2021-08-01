@@ -1,6 +1,6 @@
 package _202107_JulyLeetCodingChallenge;
 
-public class IsomorphicStrings {
+public class _205_IsomorphicStrings {
     public static void main(String[] args) {
         System.out.println(isIsomorphic("egg", "add"));
         System.out.println(isIsomorphic("foo", "bar"));

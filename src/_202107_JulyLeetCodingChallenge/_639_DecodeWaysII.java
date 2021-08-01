@@ -1,6 +1,6 @@
 package _202107_JulyLeetCodingChallenge;
 
-public class DecodeWaysII {
+public class _639_DecodeWaysII {
     public static void main(String[] args) {
         String s1 = "*", s2 = "1*", s3 = "*12*";
         //System.out.println(numDecodings1(s1));

@@ -2,7 +2,7 @@ package _202107_JulyLeetCodingChallenge;
 
 import java.util.ArrayList;
 
-public class LongestIncreasingSubsequence {
+public class _300_LongestIncreasingSubsequence {
 
     // 1 ms solution
     public int lengthOfLIS1(int[] nums) {

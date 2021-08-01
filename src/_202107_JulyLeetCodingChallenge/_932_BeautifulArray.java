@@ -3,7 +3,7 @@ package _202107_JulyLeetCodingChallenge;
 import java.util.HashMap;
 import java.util.Map;
 
-public class BeautifulArray {
+public class _932_BeautifulArray {
     Map<Integer, int[]> tracker;
 
     public int[] beautifulArray(int N) {

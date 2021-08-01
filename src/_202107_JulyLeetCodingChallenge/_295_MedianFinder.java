@@ -1,8 +1,8 @@
 package _202107_JulyLeetCodingChallenge;
 
-public class MedianFinder {
+public class _295_MedianFinder {
     public static void main(String[] args) {
-        MedianFinder mf = new MedianFinder();
+        _295_MedianFinder mf = new _295_MedianFinder();
         mf.addNum(-1);
         System.out.println(mf.findMedian());
         mf.addNum(-2);
@@ -21,7 +21,7 @@ public class MedianFinder {
     int[] hr = new int[MAX_NUM];     // min heap (right side)
     int pl, pr, p, t;
 
-    public MedianFinder() {
+    public _295_MedianFinder() {
         pl = pr = 0;
     }
 

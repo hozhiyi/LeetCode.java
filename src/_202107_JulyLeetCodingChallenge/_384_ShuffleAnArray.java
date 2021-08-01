@@ -38,10 +38,10 @@ At most 5 * 104 calls in total will be made to reset and shuffle.
  */
 import java.util.Random;
 
-public class ShuffleAnArray {
+public class _384_ShuffleAnArray {
     private int[] oriArr;
 
-    public ShuffleAnArray(int[] nums) {
+    public _384_ShuffleAnArray(int[] nums) {
         oriArr = new int[nums.length];
         for (int i = 0; i < nums.length; i++) {
             oriArr[i] = nums[i];

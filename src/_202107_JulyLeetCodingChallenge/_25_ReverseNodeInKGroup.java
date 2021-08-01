@@ -33,7 +33,7 @@ Constraints:
 - 0 <= Node.val <= 1000
 - 1 <= k <= sz
  */
-public class ReverseNodeInKGroup {
+public class _25_ReverseNodeInKGroup {
 
     public static void main(String[] args) {
         ListNode list1 = new ListNode();
@@ -47,7 +47,7 @@ public class ReverseNodeInKGroup {
         }
         print(list1);
         System.out.println();
-        print(new ReverseNodeInKGroup().reverseKGroup(list1, 3));
+        print(new _25_ReverseNodeInKGroup().reverseKGroup(list1, 3));
     }
 
     public ListNode reverseKGroup(ListNode head, int k) {

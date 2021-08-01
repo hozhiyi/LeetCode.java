@@ -1,6 +1,6 @@
 package _202107_JulyLeetCodingChallenge;
 
-public class ReshapeTheMatrix {
+public class _566_ReshapeTheMatrix {
     public static int[][] matrixReshape(int[][] mat, int r, int c) {
         int n = mat.length;
         int m = mat[0].length;

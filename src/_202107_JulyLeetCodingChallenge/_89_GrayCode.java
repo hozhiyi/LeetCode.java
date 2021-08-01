@@ -3,7 +3,7 @@ package _202107_JulyLeetCodingChallenge;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GrayCode {
+public class _89_GrayCode {
     public static void main(String[] args) {
         System.out.println(generateGrayArr(3).toString());
     }

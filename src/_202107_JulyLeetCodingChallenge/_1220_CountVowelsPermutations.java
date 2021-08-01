@@ -1,6 +1,6 @@
 package _202107_JulyLeetCodingChallenge;
 
-public class CountVowelsPermutations {
+public class _1220_CountVowelsPermutations {
     static final int mod = (int) 1e9 + 7;
 
     public static int countVowelPermutation(int n) {

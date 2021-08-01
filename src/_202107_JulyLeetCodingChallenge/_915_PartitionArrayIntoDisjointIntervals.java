@@ -24,7 +24,7 @@ Note:
 0 <= nums[i] <= 106
 It is guaranteed there is at least one way to partition nums as described.
  */
-public class PartitionArrayIntoDisjointIntervals {
+public class _915_PartitionArrayIntoDisjointIntervals {
 
     public static void main(String[] args) {
         int[] a = {5, 0, 3, 8, 6};

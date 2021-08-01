@@ -1,6 +1,6 @@
 package _202107_JulyLeetCodingChallenge;
 
-public class MaxSumOfRectangleNoLargerThanK {
+public class _363_MaxSumOfRectangleNoLargerThanK {
     public static void main(String[] args) {
         int[][] matrix = { {1,0,1},{0,-2,3}};
         int k = 2;

@@ -6,9 +6,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class _90_SubsetsII {
-    List<List<Integer>> result = new ArrayList<>();// 存放符合条件结果的集合
-    LinkedList<Integer> path = new LinkedList<>();// 用来存放符合条件结果
-    boolean[] used;
+    private List<List<Integer>> result = new ArrayList<>();// 存放符合条件结果的集合
+    private LinkedList<Integer> path = new LinkedList<>();// 用来存放符合条件结果
+    private boolean[] used;
 
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         if (nums.length == 0) {

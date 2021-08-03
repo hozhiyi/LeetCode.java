@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-public class SubsetsII {
+public class _90_SubsetsII {
     List<List<Integer>> result = new ArrayList<>();// 存放符合条件结果的集合
     LinkedList<Integer> path = new LinkedList<>();// 用来存放符合条件结果
     boolean[] used;

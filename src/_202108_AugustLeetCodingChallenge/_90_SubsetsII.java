@@ -6,11 +6,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class _90_SubsetsII {
-    private List<List<Integer>> result = new ArrayList<>();// 存放符合条件结果的集合
-    private LinkedList<Integer> path = new LinkedList<>();// 用来存放符合条件结果
-    private boolean[] used;
+    private static List<List<Integer>> result = new ArrayList<>();// 存放符合条件结果的集合
+    private static LinkedList<Integer> path = new LinkedList<>();// 用来存放符合条件结果
+    private static boolean[] used;
 
-    public List<List<Integer>> subsetsWithDup(int[] nums) {
+    public static List<List<Integer>> subsetsWithDup(int[] nums) {
         if (nums.length == 0) {
             result.add(path);
             return result;
@@ -21,7 +21,7 @@ public class _90_SubsetsII {
         return result;
     }
 
-    private void subsetsWithDupHelper(int[] nums, int startIndex) {
+    private static void subsetsWithDupHelper(int[] nums, int startIndex) {
         result.add(new ArrayList<>(path));
         if (startIndex >= nums.length) {
             return;
@@ -36,5 +36,14 @@ public class _90_SubsetsII {
             path.removeLast();
             used[i] = false;
         }
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 2};
+        int[] nums1 = {0};
+        int[] nums2 = {9, 4, 3, 3};
+        System.out.println(subsetsWithDup(nums));
+        System.out.println(subsetsWithDup(nums1));
+        System.out.println(subsetsWithDup(nums2));
     }
 }

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class _113_PathSumII {
 
-    class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -25,14 +25,14 @@ public class _113_PathSumII {
     }
 
 
-    public List<List<Integer>> pathSum(TreeNode root, int sum) {
+    public static List<List<Integer>> pathSum(TreeNode root, int sum) {
         List<List<Integer>> result = new ArrayList<>();
         dfs(root, sum, new ArrayList<>(), result);
         return result;
     }
 
-    public void dfs(TreeNode root, int sum, List<Integer> list,
-                    List<List<Integer>> result) {
+    public static void dfs(TreeNode root, int sum, List<Integer> list,
+                           List<List<Integer>> result) {
 
         if (root == null)
             return;

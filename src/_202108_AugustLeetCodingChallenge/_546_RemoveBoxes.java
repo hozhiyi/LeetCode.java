@@ -15,7 +15,7 @@ public class _546_RemoveBoxes {
         }
     }
 
-    public final int removeBoxes(final int[] boxes) {
+    public static final int removeBoxes(final int[] boxes) {
         final List<Range> arr = new ArrayList<>();
         int color = 0;
         short count = 0;
@@ -45,9 +45,9 @@ public class _546_RemoveBoxes {
     @SuppressWarnings("AssignmentToMethodParameter")
     private static short bestScore(
             final Range[] ranges,
-            int i,
-            int j,
-            short k,
+            int i, // 0
+            int j, // ranges.length
+            short k, // 0
             final short[] cache,
             final int n,
             final int n2
@@ -80,4 +80,8 @@ public class _546_RemoveBoxes {
         return score;
     }
 
+    public static void main(String[] args) {
+        int[] boxes = {1, 3, 2, 2, 2, 3, 4, 3, 1};
+        System.out.println(removeBoxes(boxes));
+    }
 }

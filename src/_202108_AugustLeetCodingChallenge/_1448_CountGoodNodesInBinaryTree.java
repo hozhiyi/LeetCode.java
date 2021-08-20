@@ -1,6 +1,26 @@
 package _202108_AugustLeetCodingChallenge;
 
 public class _1448_CountGoodNodesInBinaryTree {
+
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
+
     class Solution {
         private int res = 0;
 
@@ -10,10 +30,10 @@ public class _1448_CountGoodNodesInBinaryTree {
         }
 
         public void helper(TreeNode node, int max) {
-            if(node == null) {
+            if (node == null) {
                 return;
             }
-            if(node.val >= max) {
+            if (node.val >= max) {
                 res++;
                 max = node.val;
             }

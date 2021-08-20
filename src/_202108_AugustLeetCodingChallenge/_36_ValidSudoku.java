@@ -11,7 +11,7 @@ public class _36_ValidSudoku {
                     continue;
                 }
                 int curNum = board[i][j] - '0';
-                System.out.println(curNum);
+                System.out.print("curNum: " + curNum + " || ");
                 if (row[i][curNum] == 1) {
                     return false;
                 }
@@ -25,6 +25,7 @@ public class _36_ValidSudoku {
                 col[j][curNum] = 1;
                 box[j / 3 + (i / 3) * 3][curNum] = 1;
             }
+            System.out.println();
         }
         return true;
     }

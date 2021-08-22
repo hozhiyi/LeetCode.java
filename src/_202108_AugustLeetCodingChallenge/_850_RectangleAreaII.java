@@ -5,87 +5,43 @@ import java.util.*;
 public class _850_RectangleAreaII {
     class Solution {
         public int rectangleArea(int[][] rectangles) {
-            int OPEN = 1, CLOSE = -1;
-            int[][] events = new int[rectangles.length * 2][];
-            Set<Integer> Xvals = new HashSet();
-            int t = 0;
-            for (int[] rec : rectangles) {
-                events[t++] = new int[]{rec[1], OPEN, rec[0], rec[2]};
-                events[t++] = new int[]{rec[3], CLOSE, rec[0], rec[2]};
-                Xvals.add(rec[0]);
-                Xvals.add(rec[2]);
+            int mod = 1_000_000_007;
+            long res = 0;
+            List<int[]> recList = new ArrayList<>();
+            for (int[] rec : rectangles)
+                addRectangle(recList, rec, 0);
+
+            for (int[] rec : recList)
+                res = (res + ((long) (rec[2] - rec[0]) * (long) (rec[3] - rec[1]))) % mod;
+
+            return (int) res % mod;
+        }
+
+        public void addRectangle(List<int[]> recList, int[] curRec, int start) {
+            if (start >= recList.size()) {
+                recList.add(curRec);
+                return;
             }
 
-            Arrays.sort(events, (a, b) -> Integer.compare(a[0], b[0]));
+            int[] r = recList.get(start);
 
-            Integer[] X = Xvals.toArray(new Integer[0]);
-            Arrays.sort(X);
-            Map<Integer, Integer> Xi = new HashMap();
-            for (int i = 0; i < X.length; ++i)
-                Xi.put(X[i], i);
-
-            Node active = new Node(0, X.length - 1, X);
-            long ans = 0;
-            long cur_x_sum = 0;
-            int cur_y = events[0][0];
-
-            for (int[] event : events) {
-                int y = event[0], typ = event[1], x1 = event[2], x2 = event[3];
-                ans += cur_x_sum * (y - cur_y);
-                cur_x_sum = active.update(Xi.get(x1), Xi.get(x2), typ);
-                cur_y = y;
-
+            // No overlap
+            if (curRec[2] <= r[0] || curRec[3] <= r[1] || curRec[0] >= r[2] || curRec[1] >= r[3]) {
+                addRectangle(recList, curRec, start + 1);
+                return;
             }
 
-            ans %= 1_000_000_007;
-            return (int) ans;
-        }
-    }
+            if (curRec[0] < r[0])
+                addRectangle(recList, new int[]{curRec[0], curRec[1], r[0], curRec[3]}, start + 1);
 
-    class Node {
-        int start, end;
-        Integer[] X;
-        Node left, right;
-        int count;
-        long total;
+            if (curRec[2] > r[2])
+                addRectangle(recList, new int[]{r[2], curRec[1], curRec[2], curRec[3]}, start + 1);
 
-        public Node(int start, int end, Integer[] X) {
-            this.start = start;
-            this.end = end;
-            this.X = X;
-            left = null;
-            right = null;
-            count = 0;
-            total = 0;
-        }
+            if (curRec[1] < r[1])
+                addRectangle(recList, new int[]{Math.max(r[0], curRec[0]), curRec[1], Math.min(r[2], curRec[2]), r[1]}, start + 1);
 
-        public int getRangeMid() {
-            return start + (end - start) / 2;
-        }
-
-        public Node getLeft() {
-            if (left == null) left = new Node(start, getRangeMid(), X);
-            return left;
-        }
-
-        public Node getRight() {
-            if (right == null) right = new Node(getRangeMid(), end, X);
-            return right;
-        }
-
-        public long update(int i, int j, int val) {
-            if (i >= j) return 0;
-            if (start == i && end == j) {
-                count += val;
-            } else {
-                getLeft().update(i, Math.min(getRangeMid(), j), val);
-                getRight().update(Math.max(getRangeMid(), i), j, val);
-            }
-
-            if (count > 0) total = X[end] - X[start];
-            else total = getLeft().total + getRight().total;
-
-            return total;
+            if (curRec[3] > r[3])
+                addRectangle(recList, new int[]{Math.max(r[0], curRec[0]), r[3], Math.min(r[2], curRec[2]), curRec[3]}, start + 1);
         }
     }
 }

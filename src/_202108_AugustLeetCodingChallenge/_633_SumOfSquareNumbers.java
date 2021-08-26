@@ -5,7 +5,6 @@ public class _633_SumOfSquareNumbers {
     public static void main(String[] args) {
         System.out.println(judgeSquareSum(5));
         System.out.println(judgeSquareSum(3));
-
     }
     public static boolean judgeSquareSum(int c) {
         //fermat's theorem

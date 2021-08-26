@@ -2,7 +2,12 @@
 package _202108_AugustLeetCodingChallenge;
 
 public class _633_SumOfSquareNumbers {
-    public boolean judgeSquareSum(int c) {
+    public static void main(String[] args) {
+        System.out.println(judgeSquareSum(5));
+        System.out.println(judgeSquareSum(3));
+
+    }
+    public static boolean judgeSquareSum(int c) {
         //fermat's theorem
         for (int i = 2; i * i <= c; i++) {
             int count = 0;
